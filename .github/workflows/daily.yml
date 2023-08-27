@@ -68,7 +68,7 @@ jobs:
     - id: check
       if: env.IsOpenDailyTask=='true'
       run: |
-        echo "::set-output name=result::开启"
+        echo "result=开启" >> "$GITHUB_OUTPUT"
 
   run-daily-task:
 
