@@ -11,6 +11,7 @@ on:
     # 建议每个人通过设置名称为 Production 的 GitHub Environments 来设定为自己的目标运行时间（详细设置方法见文档说明）
 
 env:
+  IsOpenDailyTask: true
   ASPNETCORE_ENVIRONMENT: ${{secrets.ENV}} # 运行环境
   Ray_BiliBiliCookies__1: ${{secrets.COOKIESTR}}
   Ray_BiliBiliCookies__2: ${{secrets.COOKIESTR2}}
@@ -68,7 +69,7 @@ jobs:
     - id: check
       if: env.IsOpenDailyTask=='true'
       run: |
-        echo "result=开启" >> "$GITHUB_OUTPUT"
+        echo "::set-output name=result::开启"
 
   run-daily-task:
 
