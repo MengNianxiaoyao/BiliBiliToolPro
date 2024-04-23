@@ -16,7 +16,7 @@ permissions:
 jobs:
   build:
     name: publish relesae
-    if: ${{ github.repository == 'RayWangQvQ/BiliBiliToolPro' }}
+    if: ${{ github.repository == 'MengNianxiaoyao/BiliBiliToolPro' }}
     runs-on: ubuntu-latest
     
     steps:
@@ -57,6 +57,5 @@ jobs:
           name: BiliBiliToolPro-V${{ github.event.inputs.version }}
           tag_name: ${{ github.event.inputs.version }}
           body: ${{ steps.release_content.outputs.release_content }}
-          discussion_category_name: Announcements
           generate_release_notes: true
           fail_on_unmatched_files: true
