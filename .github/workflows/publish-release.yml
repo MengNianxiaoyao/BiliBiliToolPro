@@ -16,7 +16,7 @@ permissions:
 jobs:
   build:
     name: publish relesae
-    if: ${{ github.repository == 'MengNianxiaoyao/BiliBiliToolPro' }}
+    if: ${{ github.repository == 'RayWangQvQ/BiliBiliToolPro' }}
     runs-on: ubuntu-latest
     
     steps:
