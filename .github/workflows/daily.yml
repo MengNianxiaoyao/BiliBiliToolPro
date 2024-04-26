@@ -101,3 +101,5 @@ jobs:
         dotnet run --runTasks=Daily
         dotnet run --runTasks=LiveLottery
         dotnet run --runTasks=UnfollowBatched
+        dotnet run --runTasks=VipBigPoint
+        dotnet run --runTasks=LiveFansMedal
